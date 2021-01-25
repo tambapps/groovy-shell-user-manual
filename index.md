@@ -106,7 +106,7 @@ println list.technology.name.text() == 'Groovy'
 ```
 
 ### Schedule a script to run
-I introduced the notion of Shell Works, a script that runs directly on your device. You can also
+I introduced the notion of Shell Works, a script that runs on the background. You can also
 schedule it to run later, and/or make it periodic. For example, you can write a script to check if
 there are some new articles on your favorite website and notify you about!
 
@@ -115,9 +115,9 @@ Here is an example of script
 ```groovy
 import bitmap
 
-// you can load 'Environment' that you defined earlier
-// an environment is basically a script. Loading it is executing it
-// It useful to store some functions that you would often use. In this
+// you can load 'environments' that you defined earlier in the app
+// an environment is basically just a script. Loading it means executing it
+// Environments are useful to store some functions that you would often use. In this
 // case, the environment "Website Check" defines all the functions used below
 loadEnvironment "Website Check"
 
@@ -128,6 +128,7 @@ if (!isNetworkAvailable) {
 int retryCount = 3
 for (i in 1..retryCount) {
   try {
+    // function from environment Website Check
     newEpisodes = getNewEpisodes()
     break
   } catch (Exception e) {
@@ -152,12 +153,13 @@ if (newEpisodes.size() == 1) {
   def e = newEpisodes[0]
   title = "${e.title} is out!"
 } else {
+  // shell work function to make the Android notification test bigger
   setNotificationBigText(true)
   title = "Many episodes are out!"
   message = "- " + newEpisodes*.title.join("\n- ")
 }
 
-// set the notification that will be displayed at the end
+// shell work functions to set the notification that will be displayed at the end
 // of this shell work
 setFinalTitle title
 setFinalMessage message
@@ -209,7 +211,7 @@ java.nio.file.*
 java.util.concurrent.atomic.*
 ```
 
-#### Import Aliases
+### Import Aliases
 There are some aliases to import multiple packages, here is the list
 
 - `http-client` to import packages from my [Http Client Library](https://github.com/tambapps/java-rest-client)
@@ -275,11 +277,10 @@ doSomething(a, b)
 ### Give permission  
 If some network or file operations don't work, it may be because you didn't give permissions for the app to perform them
 
-Here is the list of permissions you can ask (each i)
+Here is the list of permissions you can ask
 - WRITE_EXTERNAL_STORAGE
 - READ_EXTERNAL_STORAGE
 - ACCESS_NETWORK_STATE
-- INTERNET
 
 #### Ask permission 
 ```groovy  
@@ -291,7 +292,6 @@ If you want to ask all permissions, you can enter
 ```groovy  
 requestPermission(*PERMISSIONS)
 ```
-Groovy spread operator will spread all permissions into function arguments
 
 ### Files  
 You can manipulate files of your local device. There is a notion of current directory like in shell. You can find the functions
