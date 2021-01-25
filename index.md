@@ -227,7 +227,7 @@ To use one, simply import it like you would import any package:
 import rest-client
 ````
 
-Each import script has a script that adds some functions in some objects
+Each import alias has a script that runs and adds some functions in some objects
 
 TODO document them
 
@@ -308,32 +308,33 @@ cd '..'
 ```
 Normally you can't omit parenthesis for a function with 0 arguments but I  added a little tweak so you can
 
-## Functions added
-Thanks to Groovy meta programming, I added some new methods to several classes
+## User Interface
 
-#### File
-- setLastModifiedTime(Long|Date|LocalDateTime)
-- setCreationTime(Long|Date|LocalDateTime)
-- setLastAccessTime(Long|Date|LocalDateTime)
-- getLastModifiedTime() -> Long
-- getCreationTime() -> Long
-- getLastAccessTime() -> Long
+### Menu
+There is a menu where you can change screen
 
-#### Date
-- toInstant() -> Instant
+### Shell
+This is where you prompt commands/code
 
-#### LocalDateTime
-- toDate() -> Date
+### Variables and functions
+This is where you can see all variables and functions declared
+You swipe left or right to switch from variables to functions, from functions to all
 
-#### LocalDate
-- toDate() -> Date
+### Load script
+Allow loading groovy file
 
-#### String
-- toLocalDateTime() -> LocalDateTime
-- toLocalDate() -> LocalDate
+### Save to file
+Allow to save all commands entered to a file
 
-### Network
-You can use the `URL` class, like you would do in Java.
+### Handle Shell works
+Shell works are Groovy script that are executed in the background, even when this app is closed.
+You can also schedule them and/or make them recursive
+
+### Change keyboard
+Useful if you have downloaded the Codeboard (android keyboard for coding)
+
+
+## Miscellaneous
 
 ### Http/Rest Client
 I added static methods to handle JSON/XML request with Groovy
@@ -390,37 +391,3 @@ input = System.console().readLine 'Enter some input'
 In the above example, the String passed in parameter will be displayed in the standard output (in the shell), then
 You'll have to enter some input. The text color should be blue when entering some input in STDIN. Click the prompt button
 when finished
-## User Interface
-
-### Menu
-There is a menu where you can change screen
-
-
-### Shell
-This is where you prompt commands/code
-
-### Variables and functions
-This is where you can see all variables and functions declared
-You swipe left or right to switch from variables to functions, from functions to all
-
-### Load script
-Allow to load groovy file
-
-### Save to file
-Allow to save all commands entered to a file
-
-### Handle Shell works
-Shell works are Groovy script that are executed in the background, even when this app is closed.
-You can also schedule them and/or make them recursive
-
-### Change keyboard
-Useful if you have downloaded the Codeboard (android keyboard for coding) 
-
-
-## Libraries
-
-This project uses several libraries:
-- httpclient-core (kotlin branch)
-- httpclient-okhttp (kotlin branch)
-- gmage-core
-- gmage-android
