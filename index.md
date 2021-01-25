@@ -226,7 +226,7 @@ There are some aliases to import multiple packages, here is the list
 
 To use one, simply import it like you would import any package:
 ````groovy
-import rest-client
+import http-client
 ````
 
 Each import alias has a script that runs and adds some functions in some objects
@@ -355,7 +355,7 @@ b.writeInto(file("result.png"), JPEG)
 ```
 #### Example:
 ```groovy
-import rest-client // import alias to import all usefull class from com.tambapps.http.restclient
+import http-client
 
 url = "https://jsonplaceholder.typicode.com/"
 client = new RestClient(url)
