@@ -271,7 +271,7 @@ class B {
 /*PROMPT*/
 a = CLASSES.A.newInstance()
 b = CLASSES.B.newInstance()
-
+/*PROMPT*/
 doSomething(a, b)
 ```
 ### Give permission  
