@@ -188,21 +188,3 @@ flushNewEpisodes newEpisodes
 // optionally return a result for the work
 return newEpisodes.size() + " new episodes"
 ```
-
-
-
-
-
-### Give permission  
-
-
-
-
-
-
-
-
-
-
-## Miscellaneous
-
