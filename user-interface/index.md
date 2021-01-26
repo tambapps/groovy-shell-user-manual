@@ -2,6 +2,7 @@
 
 There is a menu where you can change screen
 
+TODO add screenshots
 ## Shell
 This is where you prompt commands/code
 

@@ -2,13 +2,13 @@
 Because programming on a smartphone is one of the most badass things to do in your life,  
 I decided to adapt GroovySh to Android. This is an experimental app, not all Groovy feature are assured to work.
   
-![screenshot 1](https://raw.githubusercontent.com/tambapps/android-groovy-shell/master/screenshots/screen1.jpg)
+You can download it [here](https://play.google.com/store/apps/details?id=com.tambapps.android.grooidshell)
 
 ## Glossary
 
 * Shell Features
   * [Shell (general)](https://tambapps.github.io/groovy-shell-user-manual/shell-general/)
-  * [Shell (managing files)](https://tambapps.github.io/groovy-shell-user-manual/shell-managing-files/)
+  * [Shell (managing files)](https://tambapps.github.io/groovy-shell-user-manual/managing-files/)
   * [Import Aliases](https://tambapps.github.io/groovy-shell-user-manual/import-aliases/)
   * [User Interface](https://tambapps.github.io/groovy-shell-user-manual/user-interface/)
   * [Shell Works](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)
