@@ -4,7 +4,24 @@ I decided to adapt GroovySh to Android. This is an experimental app, not all Gro
   
 ![screenshot 1](https://raw.githubusercontent.com/tambapps/android-groovy-shell/master/screenshots/screen1.jpg)
 
+## Glossary
+
+* Shell Features
+  * [Shell (general)](https://tambapps.github.io/groovy-shell-user-manual/shell-general/)
+  * [Shell (managing files)](https://tambapps.github.io/groovy-shell-user-manual/shell-managing-files/)
+  * [Import Aliases](https://tambapps.github.io/groovy-shell-user-manual/import-aliases/)
+  * [User Interface](https://tambapps.github.io/groovy-shell-user-manual/user-interface/)
+  * [Shell Works](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)
+* Libraries
+  * [bitmap](https://tambapps.github.io/groovy-shell-user-manual/libraries/bitmap/)
+  * [charts](https://tambapps.github.io/groovy-shell-user-manual/libraries/charts/)
+  * [gmage](https://tambapps.github.io/groovy-shell-user-manual/libraries/gmage/)
+  * [http-client](https://tambapps.github.io/groovy-shell-user-manual/libraries/http-client/)
+  * [jsoup](https://tambapps.github.io/groovy-shell-user-manual/libraries/jsoup/)
+
 ## Use cases
+This is a quick presentation of the Groovy Shell. If you want more details on a section,
+click on the corresponding link in the glossary.
 
 You can use this app to...
 
@@ -172,222 +189,20 @@ flushNewEpisodes newEpisodes
 return newEpisodes.size() + " new episodes"
 ```
 
-## Features 
-Now let's talk about technical features handled
-You can use groovy syntax features, write functions, call them, define classes instantiate objects...
-You can also use Java 8 classes such as LocalDateTime, Instant and even Streams (maybe that depends on your Android device).
-Groovy syntax is compatible with Java syntax, but note that it doesn't supports Java lambda expression
-syntax. Use closure instead (e.g `{ Object o -> println(o) }`).
-
-### What does NOT work
-Unfortunately, Grape, the dynamic dependency manager does not work
-
-### Variable declarations
- Be careful with variable declaration. If you put the type (or `def`) before the variable, you submit the code and then try to access the same variable, it won't exist anymore. If you want to keep the variable after you submitted your code you'll have to omit the type/`def` like in the following example:
-
-```groovy
-a = 2
-variable = "some value"
-```
-
-### Imports 
-Here is an example of import
-Example:
-````groovy
-import java.nio.file.Path
-````
-
-In addition of Groovy default imports, here is the list of package imported by default in this shell
-```text
-java.time.*
-java.time.format.*
-java.util.concurrent.*
-groovy.json.*
-groovy.xml.*
-java.nio.file.*
-java.util.zip.*
-java.util.regex.*
-java.nio.file.*
-java.util.concurrent.atomic.*
-```
-
-### Import Aliases
-There are some aliases to import multiple packages, here is the list
-
-- `http-client` to import packages from my [Http Client Library](https://github.com/tambapps/java-rest-client)
-- `gmage` to import packages from my [Image Processing library](https://github.com/tambapps/gmage)
-- `jsoup` to import packages from [Jsoup](https://jsoup.org/)
-- `time-unit` to import enums from java TimeUit class
-- `json` to import packages from `groovy.json`
-- `xml` to import packages from `groovy.xml`
-- `chart` to import classe from the chart library, wrapper of [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
-  TODO make some documentation about it
-- `bitmap` to import classes from Android SDK Bitmap 
-
-To use one, simply import it like you would import any package:
-````groovy
-import http-client
-````
-
-Each import alias has a script that runs and adds some functions in some objects
-
-TODO document them
 
 
-### Class definition
-You can define classes. When you do so, you can't put any other instructions after in the same prompt (yeah, this is weird but this is how it works).
-You CAN put other instructions only if between the class definition and the rest, you put the comment`/*PROMPT*/`.
- To get instances from the defined class, you'll need to use java.reflect methods. You can't construct instances with 
-the syntax `a = new A()`.
- All defined classes will appear in the variable `CLASSES`, a map of cass name to java Class.
 
 
-e.g:
-
-Class definition
-```groovy
-class A {
- int b
-}
-```
-
-
-Getting instances
-```groovy
-a = CLASSES.A.newInstance()
-a2 = CLASSES.A.newInstance(b: 1)
-```
-
-Defining multiple classe and doing things after (in a same prompt)
-
-```groovy
-class A {
- int b
-}
-/*PROMPT*/
-class B {
- int a
-}
-/*PROMPT*/
-a = CLASSES.A.newInstance()
-b = CLASSES.B.newInstance()
-/*PROMPT*/
-doSomething(a, b)
-```
 ### Give permission  
-If some network or file operations don't work, it may be because you didn't give permissions for the app to perform them
 
-Here is the list of permissions you can ask
-- WRITE_EXTERNAL_STORAGE
-- READ_EXTERNAL_STORAGE
-- ACCESS_NETWORK_STATE
 
-#### Ask permission 
-```groovy  
-permission = Permissions.WRITE_EXTERNAL_STORAGE
-requestPermission(permission)
-```
 
-If you want to ask all permissions, you can enter
-```groovy  
-requestPermission(*PERMISSIONS)
-```
 
-### Files  
-You can manipulate files of your local device. There is a notion of current directory like in shell. You can find the functions
-`cd()`,  `ls()` `pwd()`.
-There is the function `file(String)` allowing to get a file
-relatively from the current directory.
-Since Groovy is a scripting language, you can omit parenthesis. By doing so you can write shell-like code like in the following example
 
-```groovy  
-pwd
-cd 'folder'
-ls 
-cd '..'
-```
-Normally you can't omit parenthesis for a function with 0 arguments but I  added a little tweak so you can
 
-## User Interface
 
-### Menu
-There is a menu where you can change screen
 
-### Shell
-This is where you prompt commands/code
-
-### Variables and functions
-This is where you can see all variables and functions declared
-You swipe left or right to switch from variables to functions, from functions to all
-
-### Load script
-Allow loading groovy file
-
-### Save to file
-Allow to save all commands entered to a file
-
-### Handle Shell works
-Shell works are Groovy script that are executed in the background, even when this app is closed.
-You can also schedule them and/or make them recursive
-
-### Change keyboard
-Useful if you have downloaded the Codeboard (android keyboard for coding)
 
 
 ## Miscellaneous
 
-### Http/Rest Client
-I added static methods to handle JSON/XML request with Groovy
-- BodyProcessors.json(Object) -> Returns a BodyProcessor converting the object into json
-- ResponseHandlers.json() -> Returns a ResponseHandler that uses a `JsonSlurper` to parse the request's data
-- ResponseHandlers.xml() -> Returns a ResponseHandler that uses a `XmlSlurper` to parse the request's data
-
-### Bitmap
-You can use android Bitmap class to manipulate images
-```groovy
-import bitmap
-f = file("image.png")
-b = f.toBitmap()
-b = b.scaled(105,105)
-// default format is PNG
-b.writeInto(file("result.png"))
-b.writeInto(file("result.png"), JPEG)
-```
-#### Example:
-```groovy
-import http-client
-
-url = "https://jsonplaceholder.typicode.com/"
-client = new RestClient(url)
-request = RestRequest.builder("/todos/1")
-.GET()
-.build()
-response = client.execute(request, ResponseHandlers.json())
-todo = response.data
-println("${todo.title} is ${todo.completed}")
-```
-
-### Charts
-The library MPAndroidChart was used to display line charts.
-For that you'll need to import the alias `chart`
-```groovy
-import chart
-```
-
-There are (for now) two kinds of charts
-- LineChart: a line chart
-- MultiLineChart : a chart allowing to display multiple lines
-
-Each of these chart objects have a method `show()` allowing to show the chart.
-By long clicking it, you can save it into a PNG file
-
-### STDIN
-You can also write programs using the standard input with the help of the `System.console()` (or variable `console`)
-
-```groovy
-input = System.console().readLine 'Enter some input'
-```
-
-In the above example, the String passed in parameter will be displayed in the standard output (in the shell), then
-You'll have to enter some input. The text color should be blue when entering some input in STDIN. Click the prompt button
-when finished
