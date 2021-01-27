@@ -1,4 +1,4 @@
-### Managing Files
+# Managing Files
 You can manipulate files of your smartphone. 
 There is a notion of current directory like in an actual desktop shell. 
 You can find the functions `cd()`,  `ls()` `cp()`. 

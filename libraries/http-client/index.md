@@ -1,4 +1,4 @@
-### Http/Rest Client
+# Http/Rest Client
 I added static methods to handle JSON/XML request with Groovy
 - BodyProcessors.json(Object) -> Returns a BodyProcessor converting the object into json
 - ResponseHandlers.json() -> Returns a ResponseHandler that uses a `JsonSlurper` to parse the request's data
