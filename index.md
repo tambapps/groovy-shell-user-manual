@@ -13,6 +13,7 @@ You can download it [here](https://play.google.com/store/apps/details?id=com.tam
   * [Environments](https://tambapps.github.io/groovy-shell-user-manual/environments/)
   * [Shell Works](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)
   * [User Interface](https://tambapps.github.io/groovy-shell-user-manual/user-interface/)
+  * [Auto Completion](https://tambapps.github.io/groovy-shell-user-manual/auto-completion/)
 * Libraries
   * [bitmap](https://tambapps.github.io/groovy-shell-user-manual/libraries/bitmap/)
   * [charts](https://tambapps.github.io/groovy-shell-user-manual/libraries/charts/)
