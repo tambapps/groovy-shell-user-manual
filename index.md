@@ -10,8 +10,9 @@ You can download it [here](https://play.google.com/store/apps/details?id=com.tam
   * [Shell (general)](https://tambapps.github.io/groovy-shell-user-manual/shell-general/)
   * [Shell (managing files)](https://tambapps.github.io/groovy-shell-user-manual/managing-files/)
   * [Import Aliases](https://tambapps.github.io/groovy-shell-user-manual/import-aliases/)
-  * [User Interface](https://tambapps.github.io/groovy-shell-user-manual/user-interface/)
+  * [Environments](https://tambapps.github.io/groovy-shell-user-manual/environments/)
   * [Shell Works](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)
+  * [User Interface](https://tambapps.github.io/groovy-shell-user-manual/user-interface/)
 * Libraries
   * [bitmap](https://tambapps.github.io/groovy-shell-user-manual/libraries/bitmap/)
   * [charts](https://tambapps.github.io/groovy-shell-user-manual/libraries/charts/)
