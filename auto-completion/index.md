@@ -102,6 +102,8 @@ You can also be proposed all permissions by applying the same logic as seen abov
 ## Screenshot example
 
 ![Auto-completion screenshot](https://tambapps.github.io/groovy-shell-user-manual/images/auto-completion.jpg "Auto-completion screenshot")
+
+
 You can see the completion dialog presenting possible completions.
 
 In the bottom left of the screen, there is the AC button
