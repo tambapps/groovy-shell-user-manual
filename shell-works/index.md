@@ -1,4 +1,4 @@
-# Shell Works
+# Shell Works (pro feature)
 
 A Shell Work is a script that is executed in the background and can run
 even while your aren't on the app, or the app is closed. It uses

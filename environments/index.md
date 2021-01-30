@@ -1,4 +1,4 @@
-# Environments
+# Environments (pro feature)
 
 Environments are basically scripts that you can easily load. They provide a practical way to load a script,
 without having through the file picker every time you need it. 
