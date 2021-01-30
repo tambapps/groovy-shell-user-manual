@@ -2,4 +2,4 @@
 
 ## 2.1.0
 
-- Made documentation accessible from within app
+- Made documentation accessible directly from app
