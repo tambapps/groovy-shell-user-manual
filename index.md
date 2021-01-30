@@ -10,10 +10,10 @@ You can download it [here](https://play.google.com/store/apps/details?id=com.tam
   * [Shell (general)](https://tambapps.github.io/groovy-shell-user-manual/shell-general/)
   * [Shell (managing files)](https://tambapps.github.io/groovy-shell-user-manual/managing-files/)
   * [Import Aliases](https://tambapps.github.io/groovy-shell-user-manual/import-aliases/)
-  * [Environments](https://tambapps.github.io/groovy-shell-user-manual/environments/)
-  * [Shell Works](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)
+  * [Environments(pro feature)](https://tambapps.github.io/groovy-shell-user-manual/environments/)
+  * [Shell Works(pro feature)](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)
+  * [Auto Completion (pro feature)](https://tambapps.github.io/groovy-shell-user-manual/auto-completion/)
   * [User Interface](https://tambapps.github.io/groovy-shell-user-manual/user-interface/)
-  * [Auto Completion](https://tambapps.github.io/groovy-shell-user-manual/auto-completion/)
 * Libraries
   * [bitmap](https://tambapps.github.io/groovy-shell-user-manual/libraries/bitmap/)
   * [charts](https://tambapps.github.io/groovy-shell-user-manual/libraries/charts/)
