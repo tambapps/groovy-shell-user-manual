@@ -19,7 +19,7 @@ Example:
 
 ```groovy
 import chart
-import time-unit
+import time
 chart = new LineChart()
 x = []
 for (i in (1..10)) x.add(LocalDateTime.now().minusDays(10 - i) as Long)

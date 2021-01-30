@@ -9,7 +9,7 @@ in one commands. Here is the list of import aliases
 - `time` to import dates Java classes
 - `json` to import packages from `groovy.json`
 - `xml` to import packages from `groovy.xml`
-- `chart` to import classes from the [chart library](https://tambapps.github.io/groovy-shell-user-manual/charts/), wrapper of [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
+- `chart` to import classes from the [chart library](https://tambapps.github.io/groovy-shell-user-manual/libraries/charts/), wrapper of [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
   TODO make some documentation about it
 - `bitmap` to import classes from Android SDK Bitmap
 
