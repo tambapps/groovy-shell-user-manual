@@ -7,17 +7,3 @@ I added methods like
 - Element.getAt to access a i-th child `element[i]` (not sure it works, I haven't tested it)
 - Element.propertyMissing(String name) a Groovy method invoked when accessing a property that doesn't exists.
 This is used to access an Element's tag `element['src]`
-
-Jsoup.metaClass.static.parseUrl = { String url ->
-return org.jsoup.Jsoup.connect(url).get()
-}
-
-Element.metaClass.getAt = { Integer index ->
-delegate.child(index)
-}
-
-// used to access property with getAt(String) operator
-// it seems that Groovy tries to extract property named $property
-Element.metaClass.propertyMissing = { String property ->
-return delegate.attr(property)
-}

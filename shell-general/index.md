@@ -45,7 +45,7 @@ Example:
 import java.nio.file.Path
 ````
 
-In addition, of Groovy default imports, here is the list of package imported by default in this shell
+In addition, of [Groovy default imports](https://groovy-lang.org/structure.html#_default_imports), here is the list of package imported by default in this shell
 ```text
 java.time.*
 java.time.format.*
