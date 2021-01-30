@@ -19,6 +19,7 @@ You can download it [here](https://play.google.com/store/apps/details?id=com.tam
   * [gmage](https://tambapps.github.io/groovy-shell-user-manual/libraries/gmage/)
   * [http-client](https://tambapps.github.io/groovy-shell-user-manual/libraries/http-client/)
   * [jsoup](https://tambapps.github.io/groovy-shell-user-manual/libraries/jsoup/)
+* [Changelog](https://tambapps.github.io/groovy-shell-user-manual/changelog/)
 
 ## Use cases
 This is a quick presentation of the Groovy Shell. If you want more details on a section,
