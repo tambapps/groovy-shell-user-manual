@@ -10,7 +10,6 @@ in one commands. Here is the list of import aliases
 - `json` to import packages from `groovy.json`
 - `xml` to import packages from `groovy.xml`
 - `chart` to import classes from the [chart library](https://tambapps.github.io/groovy-shell-user-manual/libraries/charts/), wrapper of [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
-  TODO make some documentation about it
 - `bitmap` to import classes from Android SDK Bitmap
 
 To use one, simply import it like you would import any package:
@@ -21,7 +20,6 @@ import http-client
 Each import alias has a script that runs and adds some functions in some objects, by using
 Groovy meta-programming
 
-TODO document them BETTER
 
 Here are some example of codes with added functions for some import aliases
 

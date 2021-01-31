@@ -1,6 +1,5 @@
 # Jsoup
-Jsoup is a HTML Parser. This library IS NOT MINE, the documentation can
-be found [here](https://github.com/jhy/jsoup)
+Jsoup is a HTML Parser. The documentation can be found [here](https://github.com/jhy/jsoup)
 
 I added methods like
 - Jsoup.parseUrl(String) (static method) to instanciate a Document from an URL easily
