@@ -136,6 +136,3 @@ You'll have to enter some input. The text color should be blue when entering som
 when finished, to submit the text to STDIN.
 
 So you can write scripts that takes input data.
-
-## Javadoc
-TODO
