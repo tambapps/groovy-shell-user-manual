@@ -8,6 +8,8 @@ You can use groovy syntax features, write functions, call them, define classes i
 You can also use Java 8 classes such as LocalDateTime, Instant and even Streams (maybe that depends on your Android device).
 Groovy syntax is compatible with Java syntax, but note that it doesn't support Java lambda expression
 syntax. Use closure instead (e.g `{ Object o -> println(o) }`).
+
+
 Groovy meta-programming also works. You can define, override method of classes/objects at runtime.
 To perform that, check the [Groovy documentation](https://groovy-lang.org/documentation.html)
 
@@ -20,7 +22,7 @@ Be careful with variable declaration. If you put the type (or `def`) before the 
 If you want to keep the variable after you submitted your code you'll have to omit the type/`def`.
 
 The following example will not work
-
+images
 prompts
 ```groovy
 def a = 2
@@ -134,3 +136,6 @@ You'll have to enter some input. The text color should be blue when entering som
 when finished, to submit the text to STDIN.
 
 So you can write scripts that takes input data.
+
+## Javadoc
+TODO
