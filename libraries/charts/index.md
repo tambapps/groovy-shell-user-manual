@@ -35,6 +35,9 @@ chart.setX(x)
   .show()
 ```
 
+## Javadoc
+You can consult the javadoc [here](https://tambapps.github.io/groovy-shell-user-manual/libraries/charts/javadoc/)
+
 ## Screenshots
 
 ![Charts screenshot](https://tambapps.github.io/groovy-shell-user-manual/images/chart_scrrenshot1.jpg "Charts screenshot")
@@ -42,3 +45,4 @@ chart.setX(x)
 ![Charts screenshot](https://tambapps.github.io/groovy-shell-user-manual/images/chart_scrrenshot2.jpg "Charts screenshot")
 
 If you long press the chart, you can save it in PNG format.
+
