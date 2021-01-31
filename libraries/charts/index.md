@@ -34,3 +34,11 @@ chart.setX(x)
   .setDrawValues(true)
   .show()
 ```
+
+## Screenshots
+
+![Charts screenshot](https://tambapps.github.io/groovy-shell-user-manual/images/chart_scrrenshot1.jpg "Charts screenshot")
+
+![Charts screenshot](https://tambapps.github.io/groovy-shell-user-manual/images/chart_scrrenshot2.jpg "Charts screenshot")
+
+If you long press the chart, you can save it in PNG format.
