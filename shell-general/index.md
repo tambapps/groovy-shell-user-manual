@@ -4,8 +4,9 @@ This section talks about some Groovy features handled by this shell and how to u
 ## Features
 This shell can use most of Groovy SDK. It is based on Groovy 2.4.XX. The version used will be
 displayed when you'll start the shell.
+
 You can use groovy syntax features, write functions, call them, define classes instantiate objects...
-You can also use Java 8 classes such as LocalDateTime, Instant and even Streams (maybe that depends on your Android device).
+You can also use Java classes such as LocalDateTime, Instant and even Streams.
 Groovy syntax is compatible with Java syntax, but note that it doesn't support Java lambda expression
 syntax. Use closure instead (e.g `{ Object o -> println(o) }`).
 

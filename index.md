@@ -41,7 +41,7 @@ This script is absolutely useless, but you get the idea of what you can do with 
 
 ### Perform network operations
 
-You can use plain Java
+You can use plain Groovy
 
 ```groovy
 response = new URL("https://jsonplaceholder.typicode.com/").text
