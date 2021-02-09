@@ -140,10 +140,6 @@ import bitmap
 // case, the environment "Website Check" defines all the functions used below
 loadEnvironment "Website Check"
 
-// variable accessible from shell work
-if (!isNetworkAvailable) {
-  return "Network not available"
-}
 int retryCount = 3
 for (i in 1..retryCount) {
   try {

@@ -25,3 +25,8 @@ loadEnvironment "Website Check"
 
 
 And I would also be able to use these functions from a Shell Work script with the same command.
+
+
+## Environment variables
+
+When loading an environment, the variable `envDir` is initialized. It is a `File`  of the directory of your environment. It can be useful if you want to store files specific to this environment. Note that you will find a `data.json` in this directory. This file should not be modified
