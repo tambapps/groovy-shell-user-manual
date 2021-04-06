@@ -2,10 +2,10 @@
 An import alias is basically an alias that will be used to import many packages (and eventually enums),
 in one commands. Here is the list of import aliases
 
-- `http-client` to import packages from my [Http Client Library](https://github.com/tambapps/java-rest-client)
+- `httpclient` to import packages from my [Http Client Library](https://github.com/tambapps/java-rest-client)
 - `gmage` to import packages from my [Image Processing library](https://github.com/tambapps/gmage)
 - `jsoup` to import packages from [Jsoup](https://jsoup.org/)
-- `time-unit` to import enums from java TimeUit class
+- `timeunit` to import enums from java TimeUit class
 - `time` to import dates Java classes
 - `json` to import packages from `groovy.json`
 - `xml` to import packages from `groovy.xml`
@@ -14,7 +14,7 @@ in one commands. Here is the list of import aliases
 
 To use one, simply import it like you would import any package:
 ````groovy
-import http-client
+import httpclient
 ````
 
 Each import alias has a script that runs and adds some functions in some objects, by using
@@ -37,7 +37,7 @@ b.writeInto(file("result.png"), JPEG)
 
 #### Example:
 ```groovy
-import http-client
+import httpclient
 
 url = "https://jsonplaceholder.typicode.com/"
 client = new RestClient(url)

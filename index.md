@@ -10,6 +10,7 @@ You can download it [here](https://play.google.com/store/apps/details?id=com.tam
   * [Shell (general)](https://tambapps.github.io/groovy-shell-user-manual/shell-general/)
   * [Shell (managing files)](https://tambapps.github.io/groovy-shell-user-manual/managing-files/)
   * [Import Aliases](https://tambapps.github.io/groovy-shell-user-manual/import-aliases/)
+  * [Dependency Management](https://tambapps.github.io/groovy-shell-user-manual/dependency-management/)
   * [Environments (pro feature)](https://tambapps.github.io/groovy-shell-user-manual/environments/)
   * [Shell Works (pro feature)](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)
   * [Auto Completion (pro feature)](https://tambapps.github.io/groovy-shell-user-manual/auto-completion/)
@@ -50,7 +51,7 @@ println response
 
 or use my [http-client library](https://github.com/tambapps/java-rest-client)
 ```groovy
-import http-client // this is an import alias, we'll get on that later
+import httpclient // this is an import alias, we'll get on that later
 API_URL = "https://jsonplaceholder.typicode.com/"
 client = new RestClient(API_URL)
 request = Request.get("posts/1")
@@ -66,6 +67,19 @@ newsHeadlines = doc.select("#mp-itn b a");
 for (Element headline in newsHeadlines) {
  println String.format("%s\n\t%s", headline.attr("title"), headline.absUrl("href"))
 }
+```
+
+### Import and use your favorite Java libraries
+
+With GrapeDex, you can import any Android-compatible Java library from Maven:
+
+```groovy
+import dex
+addedJarsToClassPaths = DexGrape.grab("com.google.code.gson", "gson", "2.8.6")
+println "List of jars added to classpath: $addedJarsToClassPaths"
+
+import com.google.gson.Gson
+g = new Gson()
 ```
 
 ### Perform modify images directly on your phone
