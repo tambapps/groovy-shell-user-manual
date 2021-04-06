@@ -3,7 +3,7 @@
 ## 3.0.0
 
 - [Major Improvment] defined classes can now be used directly (`new A()` instead of `CLASSES.A.newInstance()` before)
-- [New Feature] Can import dependencies dynamically from maven repository (consult doc [here](https://tambapps.github.io/groovy-shell-user-manual/dependency-management/grapedex/))
+- [New Feature] Can import dependencies dynamically from maven repository (consult doc [here](https://tambapps.github.io/groovy-shell-user-manual/dependency-management/dexgrape/))
 - [New Feature] Can import dependencies dynamically from local jars or url (consult doc [here](https://tambapps.github.io/groovy-shell-user-manual/dependency-management/dexter/))
 - better handling of imports commands
 - renamed respectively import aliases `http-client` and `time-unit` to `httpclient` and `timeunit`

@@ -71,7 +71,7 @@ for (Element headline in newsHeadlines) {
 
 ### Import and use your favorite Java libraries
 
-With GrapeDex, you can import any Android-compatible Java library from Maven:
+With DexGrape, you can import any Android-compatible Java library from Maven:
 
 ```groovy
 import dex

@@ -4,7 +4,7 @@ The Android Groovy Shell has a dependency manager that allows you to
 quickly add maven repository dependencies to your classpath.
 
 ## Load Maven dependencies
-You can load dependencies directly from Maven (more details [here](https://tambapps.github.io/groovy-shell-user-manual/dependency-management/grapedex/))
+You can load dependencies directly from Maven (more details [here](https://tambapps.github.io/groovy-shell-user-manual/dependency-management/dexgrape/))
 ```groovy
 import dex
 DexGrape.grab("com.google.code.gson", "gson", "2.8.6")

@@ -1,8 +1,8 @@
-# GrapeDex the Maven dependency manager
+# DexGrape the Maven dependency manager
 
 Since Groovy Shell 3.0.0, you can now load dependencies dynamically from Maven. It is the adaptation of Groovy [Grape](http://docs.groovy-lang.org/latest/html/documentation/grape.html).
 
-Note that jars loaded by `GrapeDex` will be added to your classpath only for the current session. When
+Note that jars loaded by `DexGrape` will be added to your classpath only for the current session. When
 the app is killed, all loaded dependencies are discarded. If you want to keep dependencies on your classpath
 everytime you start a Shell, you can achieve that by [managing your additional class path](https://tambapps.github.io/groovy-shell-user-manual/dependency-management/additional-classpath/)
 
