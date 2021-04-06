@@ -4,7 +4,7 @@
 
 - [Breaking Change] defined classes can now be used directly (`new A()` instead of `CLASSES.A.newInstance()` before)
 
-### introducing the dependency manager GrapeDex and Dexter
+### Introducing the dependency manager GrapeDex and Dexter
 - Can import dependencies dynamically from maven repository see doc [here](TODO)
 - Can import dependencies dynamically from local jars or url, with Dexter see doc [here](TODO)
 - Can handle dependencies loaded dynamically [here](TODO)

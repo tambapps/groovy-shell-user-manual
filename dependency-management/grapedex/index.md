@@ -28,8 +28,8 @@ import dex
 Just grab the dependency with `DexGrape`
 ```groovy
 import dex
-addedJarsToClassPaths = DexGrape.grab("com.google.code.gson", "gson", "2.8.6")
-println "List of jars added to classpath: $addedJarsToClassPaths"
+addedJarsToClassPath = DexGrape.grab("com.google.code.gson", "gson", "2.8.6")
+println "List of jars added to classpath: $addedJarsToClassPath"
 
 import com.google.gson.Gson
 g = new Gson()
@@ -41,7 +41,8 @@ groovy.grape.Grape.grab(group:'com.google.code.gson', module: 'gson', version: '
 ```
 
 ### Resolve Maven dependency
-Resolving a Maven will just fetch the dependency (and its transitive), and return them.
+Resolving a Maven will just fetch the dependency (and its transitive), and return them, but it won't
+add them to your classpath.
 
 
 ```groovy

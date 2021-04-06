@@ -75,9 +75,7 @@ With GrapeDex, you can import any Android-compatible Java library from Maven:
 
 ```groovy
 import dex
-addedJarsToClassPaths = DexGrape.grab("com.google.code.gson", "gson", "2.8.6")
-println "List of jars added to classpath: $addedJarsToClassPaths"
-
+DexGrape.grab("com.google.code.gson", "gson", "2.8.6")
 import com.google.gson.Gson
 g = new Gson()
 ```

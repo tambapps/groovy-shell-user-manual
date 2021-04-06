@@ -1,4 +1,4 @@
-# Dexter, the jar to dex jar handler
+# Dexter, the normal jar to dex jar handler
 
 Dexter allows you to load jars and add them to your classpath so that you can use the classes held
 in them.
