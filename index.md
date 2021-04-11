@@ -28,6 +28,43 @@ click on the corresponding link in the glossary.
 
 You can use this app to...
 
+### Write Java/Groovy programs
+
+```groovy
+fibonacci = { Integer n ->
+  switch (n) {
+    case 0:
+    case 1:
+      return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+  }
+}
+
+fibonacci(10)
+```
+
+### Import and use your favorite Java libraries
+
+With DexGrape, you can import dependencies from a Maven repository:
+
+```groovy
+import dex
+DexGrape.grab('org.apache.commons', 'commons-csv', '1.8')
+import org.apache.commons.csv.CSVFormat
+
+f = file("biostats.csv")
+Reader reader = f.newReader()
+def records = CSVFormat.DEFAULT .withHeader(["Name", "Gender", "Age", "Height", "Weight"] as String[])
+        .withFirstRecordAsHeader()
+        .parse(reader)
+for (record in records) {
+  String name = record.get("Name")
+  String age = record.get("Age")
+  println "$name, $age"
+}
+reader.close()
+```
+
 ### Manage your files
 ````groovy
 cd "Download"
@@ -67,17 +104,6 @@ newsHeadlines = doc.select("#mp-itn b a");
 for (Element headline in newsHeadlines) {
  println String.format("%s\n\t%s", headline.attr("title"), headline.absUrl("href"))
 }
-```
-
-### Import and use your favorite Java libraries
-
-With DexGrape, you can import any Android-compatible Java library from Maven:
-
-```groovy
-import dex
-DexGrape.grab("com.google.code.gson", "gson", "2.8.6")
-import com.google.gson.Gson
-g = new Gson()
 ```
 
 ### Perform modify images directly on your phone

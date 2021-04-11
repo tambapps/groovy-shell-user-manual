@@ -9,3 +9,13 @@ local repository), so that each time you starts a shell, all jars from this dire
 
 You can provide both dex jars or non dex jars, the Android Groovy Shell will convert it 
 (in the copy, without modifying the original jar) if necessary.
+
+
+You can consult your class path with the following code example
+
+```groovy
+
+import dex
+
+println ClassPathHandler.getClassPath()
+```
