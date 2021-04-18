@@ -14,10 +14,6 @@ syntax. Use closure instead (e.g `{ Object o -> println(o) }`).
 Groovy meta-programming also works. You can define, override method of classes/objects at runtime.
 To perform that, check the [Groovy documentation](https://groovy-lang.org/documentation.html)
 
-### What does NOT work
-Unfortunately, Grape, the dynamic dependency manager does not work.
-Now let's get back on what does work
-
 ### Variable declarations
 Be careful with variable declaration. If you put the type (or `def`) before the variable, you submit the code (a prompt) and then try to access the same variable, it won't exist anymore.
 If you want to keep the variable after you submitted your code you'll have to omit the type/`def`.
@@ -87,9 +83,8 @@ You can also see granted permissions in the preferences screen.
 ### Class definition
 You can define classes. When you do so, by default, you can't put any other instructions after in the same prompt, they won't be processed (yeah, this is weird but this is how it works).
 You CAN put other instructions only if between the class definition and the rest, you put special the comment`/*PROMPT*/`.
-To get instances from the defined class, you'll need to use java.reflect methods. You can't construct instances with
-the syntax `a = new A()`.
-All defined classes will appear in the variable `CLASSES`, a map of class name -> class.
+To get instances from the defined class, you'll need to use java.reflect methods. You can construct instances with
+the syntax `a = new A()`. Also, all defined classes will appear in the variable `CLASSES`, a map of class name -> class.
 
 
 e.g:
@@ -104,13 +99,22 @@ class A {
 
 Getting instances
 ```groovy
-a = CLASSES.A.newInstance()
-a2 = CLASSES.A.newInstance(b: 1)
+a = new A()
+a2 = A(b: 1)
+a3 = CLASSES.A.newInstance()
+a4 = CLASSES.A.newInstance(b: 1)
 ```
+
+### Special comment `/*PROMPT*/`
+This comment allows you to define classes in a script/shell works, or even defining multiple
+classes.
 
 Defining multiple classes and doing things after (in a same prompt)
 
 ```groovy
+int value = 2
+doSomething()
+/*PROMPT*/
 class A {
  int b
 }
@@ -119,8 +123,8 @@ class B {
  int a
 }
 /*PROMPT*/
-a = CLASSES.A.newInstance()
-b = CLASSES.B.newInstance()
+a = new A(b: value)
+b = new B()
 /*PROMPT*/
 doSomething(a, b)
 ```
