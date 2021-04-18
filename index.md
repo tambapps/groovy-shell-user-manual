@@ -18,7 +18,7 @@ You can download it [here](https://play.google.com/store/apps/details?id=com.tam
   * [bitmap](https://tambapps.github.io/groovy-shell-user-manual/libraries/bitmap/)
   * [charts](https://tambapps.github.io/groovy-shell-user-manual/libraries/charts/)
   * [gmage](https://tambapps.github.io/groovy-shell-user-manual/libraries/gmage/)
-  * [http-client](https://tambapps.github.io/groovy-shell-user-manual/libraries/http-client/)
+  * [hyperpoet](https://github.com/tambapps/hyperpoet/)
   * [jsoup](https://tambapps.github.io/groovy-shell-user-manual/libraries/jsoup/)
 * [Changelog](https://tambapps.github.io/groovy-shell-user-manual/changelog/)
 
@@ -55,7 +55,7 @@ import org.apache.commons.csv.CSVFormat
 
 f = file("biostats.csv")
 Reader reader = f.newReader()
-def records = CSVFormat.DEFAULT .withHeader(["Name", "Gender", "Age", "Height", "Weight"] as String[])
+def records = CSVFormat.DEFAULT.withHeader(["Name", "Gender", "Age", "Height", "Weight"] as String[])
         .withFirstRecordAsHeader()
         .parse(reader)
 for (record in records) {
@@ -80,22 +80,14 @@ This script is absolutely useless, but you get the idea of what you can do with 
 
 ### Perform network operations
 
-You can use plain Groovy
+use my [http-client library](https://github.com/tambapps/hyperpoet)
 
-```groovy
-response = new URL("https://jsonplaceholder.typicode.com/").text
-println response
-```
-
-or use my [http-client library](https://github.com/tambapps/java-rest-client)
 ```groovy
 import httpclient // this is an import alias, we'll get on that later
 API_URL = "https://jsonplaceholder.typicode.com/"
-client = new RestClient(API_URL)
-request = Request.get("posts/1")
-         .build()
-response = client.execute(request, ResponseHandlers.json())
-println response.data.title
+client = new HttpPoet(url: API_URL, contentType: ContentType.JSON, acceptContentType: ContentType.JSON)
+data = client.get("/posts")
+println data.title
 ```
 
 or perform some web scrapping with [jsoup](https://github.com/jhy/jsoup)

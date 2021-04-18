@@ -27,3 +27,7 @@ Within a Shell Work Script, you can use several variables/functions
 - setFinalMessage(String) -> set the message of the final notification, notification that will be displayed
   when the shell work is finished, even if silent
 - setNotificationBigText(Boolean) -> set whether the final should be larger to display a long message
+
+## Defining classes in a Shell Works
+
+If you want to define classes you'll need to use the [special prompt comment](https://tambapps.github.io/groovy-shell-user-manual/shell-general/#special-comment-prompt)

@@ -17,7 +17,7 @@ To use one, simply import it like you would import any package:
 import httpclient
 ````
 
-Each import alias has a script that runs and adds some functions in some objects, by using
+An import alias can have a script that runs when imported to (for example) add some functions in some objects, by using
 Groovy meta-programming
 
 

@@ -16,6 +16,6 @@ You can consult your class path with the following code example
 ```groovy
 
 import dex
-
-println ClassPathHandler.getClassPath()
+classPathHandler = new ClassPathHandler()
+println classPathHandler.getClassPath()
 ```

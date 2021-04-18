@@ -28,4 +28,4 @@ f = new FileSharer()
 
 ## Load additional jars every time you starts a shell
 
-You can add jars to your classpath permanently by adding them to your [addittional classpath](https://tambapps.github.io/groovy-shell-user-manual/dependency-management/additional-classpath/)
+You can add jars to your classpath permanently by adding them to your [additional classpath](https://tambapps.github.io/groovy-shell-user-manual/dependency-management/additional-classpath/)

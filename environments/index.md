@@ -30,3 +30,7 @@ And I would also be able to use these functions from a Shell Work script with th
 ## Environment variables
 
 When loading an environment, the variable `envDir` is initialized. It is a `File`  of the directory of your environment. It can be useful if you want to store files specific to this environment. Note that you will find a `data.json` in this directory. This file should not be modified
+
+## Defining classes in an environment
+
+If you want to define classes you'll need to use the [special prompt comment](https://tambapps.github.io/groovy-shell-user-manual/shell-general/#special-comment-prompt)

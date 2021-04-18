@@ -15,9 +15,9 @@ so they are variables too.
 e.g:
 
 ```groovy
-CLAS
+HOM
 ```
-Using AC with this input will propose you the variables `CLASSES`
+Using AC with this input will propose you the variables `HOME_DIRECTORY`
 
 ```groovy
 load
