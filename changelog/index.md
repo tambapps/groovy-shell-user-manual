@@ -2,7 +2,7 @@
 
 ## 3.0.1
 - Changed ClassPathHandler API
-- replaced `httpclient` with `httppoet`
+- replaced [http-client](https://github.com/nelson888/java-rest-client) library with [hyperpoet](https://github.com/tambapps/hyperpoet)
 
 
 ## 3.0.0
