@@ -1,5 +1,8 @@
 # Managing Files
 You can manipulate files of your smartphone. 
+Before managing them, you'll need to [ask read and write permission](https://tambapps.github.io/groovy-shell-user-manual/shell-general/#ask-permission).
+
+
 There is a notion of current directory like in an actual desktop shell.
 The current directory is stored in the variable `pwd`, along with its `parentFile`. 
 You can instantiate files relatively from the current directory with
