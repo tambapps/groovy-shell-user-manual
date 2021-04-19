@@ -4,6 +4,8 @@ I decided to adapt [GroovySh](https://groovy-lang.org/groovysh.html) to Android.
   
 You can download it [here](https://play.google.com/store/apps/details?id=com.tambapps.android.grooidshell)
 
+I strongly recommend using this app with a keyboard adapted for coding such as [CodeBoard](https://play.google.com/store/apps/details?id=com.gazlaws.codeboard)
+
 ## Glossary
 
 * Shell Features
@@ -83,7 +85,7 @@ This script is absolutely useless, but you get the idea of what you can do with 
 use my [http-client library](https://github.com/tambapps/hyperpoet)
 
 ```groovy
-import httpclient // this is an import alias, we'll get on that later
+import hyperpoet // this is an import alias, we'll get on that later
 API_URL = "https://jsonplaceholder.typicode.com/"
 client = new HttpPoet(url: API_URL, contentType: ContentType.JSON, acceptContentType: ContentType.JSON)
 data = client.get("/posts")

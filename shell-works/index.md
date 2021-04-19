@@ -31,3 +31,13 @@ Within a Shell Work Script, you can use several variables/functions
 ## Defining classes in a Shell Works
 
 If you want to define classes you'll need to use the [special prompt comment](https://tambapps.github.io/groovy-shell-user-manual/shell-general/#special-comment-prompt)
+
+
+## Use cases
+Here are some examples of uses of Shell Works
+
+- Make a shell work that will fetch your favorite blog periodically and notify you when a new article is out
+- Make a shell work for a program that takes time. That way you can do other things while the program is executing
+- Use it as a periodic alarm
+
+and the list goes on...

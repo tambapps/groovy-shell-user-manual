@@ -2,7 +2,7 @@
 An import alias is basically an alias that will be used to import many packages (and eventually enums),
 in one commands. Here is the list of import aliases
 
-- `httpclient` to import packages from my [Http Client Library](https://github.com/tambapps/java-rest-client)
+- `hyperpoet` to import packages from my [Http Client Library](https://github.com/tambapps/java-rest-client)
 - `gmage` to import packages from my [Image Processing library](https://github.com/tambapps/gmage)
 - `jsoup` to import packages from [Jsoup](https://jsoup.org/)
 - `timeunit` to import enums from java TimeUit class
@@ -14,7 +14,7 @@ in one commands. Here is the list of import aliases
 
 To use one, simply import it like you would import any package:
 ````groovy
-import httpclient
+import gmage
 ````
 
 An import alias can have a script that runs when imported to (for example) add some functions in some objects, by using
@@ -37,15 +37,10 @@ b.writeInto(file("result.png"), JPEG)
 
 #### Example:
 ```groovy
-import httpclient
-
-url = "https://jsonplaceholder.typicode.com/"
-client = new RestClient(url)
-request = RestRequest.builder("/todos/1")
-.GET()
-.build()
-response = client.execute(request, ResponseHandlers.json())
-todo = response.data
-println("${todo.title} is ${todo.completed}")
+import hyperpoet
+API_URL = "https://jsonplaceholder.typicode.com/"
+client = new HttpPoet(url: API_URL, contentType: ContentType.JSON, acceptContentType: ContentType.JSON)
+data = client.get("/posts")
+println data.title
 ```
 
