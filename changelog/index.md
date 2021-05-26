@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.1.1
+- Adapted to [Android 11 new restrictions](https://developer.android.com/about/versions/11/privacy/storage#:~:text=Android%2011%20expands%20upon%20this,its%20data%20directory%20world%2Dreadable.)
+
 ## 3.0.1
 - Changed ClassPathHandler API
 - replaced [http-client](https://github.com/nelson888/java-rest-client) library with [hyperpoet](https://github.com/tambapps/hyperpoet)

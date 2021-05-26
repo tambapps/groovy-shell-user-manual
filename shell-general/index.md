@@ -61,6 +61,8 @@ java.util.concurrent.atomic.*
 Furthermore, you can import many packages (and enums) with [import aliases](https://tambapps.github.io/groovy-shell-user-manual/import-aliases/)
 
 ### Ask permission
+
+## Pre Android 11
 Android restricts the app access to files. To grant it, you'll need to ask permission like in the following
 example.
 ```groovy  
@@ -79,6 +81,14 @@ Here is the list of permissions you can ask
 - ACCESS_NETWORK_STATE
 
 You can also see granted permissions in the preferences screen.
+
+## Post Android 11
+Since [Android 11 new restrictions](https://developer.android.com/about/versions/11/privacy/storage#:~:text=Android%2011%20expands%20upon%20this,its%20data%20directory%20world%2Dreadable.), a the READ/WRITE_EXTERNAL_STORAGE 
+permissions became useless, they have been replaced by the MANAGE_EXTERNAL_STORAGE, allowing to read AND write to external storage. You
+can request this permission with the following function:
+```groovy
+requestManageFilesPermission()
+```
 
 ### Class definition
 You can define classes. When you do so, by default, you can't put any other instructions after in the same prompt, they won't be processed (yeah, this is weird but this is how it works).
