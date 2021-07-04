@@ -1,6 +1,10 @@
 # Android Groovy Shell  
 Because programming on a smartphone is one of the most badass things to do in your life,  
-I decided to adapt [GroovySh](https://groovy-lang.org/groovysh.html) to Android. This is an experimental app, not all Groovy feature are assured to work.
+I decided to adapt [GroovySh](https://groovy-lang.org/groovysh.html) to Android. 
+
+
+This app allows you to write, compile and run Groovy code directly from your smartphone. It also works offline
+  
   
 You can download it [here](https://play.google.com/store/apps/details?id=com.tambapps.android.grooidshell)
 
