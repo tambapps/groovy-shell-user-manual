@@ -4,9 +4,8 @@ I decided to adapt [GroovySh](https://groovy-lang.org/groovysh.html) to Android.
 
 
 This app allows you to write, compile and run Groovy code directly from your smartphone. It also works offline
-  
-  
-You can download it [here](https://play.google.com/store/apps/details?id=com.tambapps.android.grooidshell)
+
+<a href='https://play.google.com/store/apps/details?id=com.tambapps.android.grooidshell&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width="200"/></a>  
 
 I strongly recommend using this app with a keyboard adapted for coding such as [CodeBoard](https://play.google.com/store/apps/details?id=com.gazlaws.codeboard)
 
@@ -166,60 +165,4 @@ I introduced the notion of Shell Works, a script that runs on the background. Yo
 schedule it to run later, and/or make it periodic. For example, you can write a script to check if
 there are some new articles on your favorite website and notify you about!
 
-Here is an example of script
-
-```groovy
-import bitmap
-
-// you can load 'environments' that you defined earlier in the app
-// an environment is basically just a script. Loading it means executing it
-// Environments are useful to store some functions that you would often use. In this
-// case, the environment "Website Check" defines all the functions used below
-loadEnvironment "Website Check"
-
-int retryCount = 3
-for (i in 1..retryCount) {
-  try {
-    // function from environment Website Check
-    newEpisodes = getNewEpisodes()
-    break
-  } catch (Exception e) {
-    if (i == retryCount) {
-      throw e
-    }
-  }
-}
-
-if (!newEpisodes) {
-  return "no new episodes\n"
-}
-String title = null
-String message = ""
-Bitmap icon = null
-try  {
- // static function added with import alias
-  icon = Bitmap.fromURL(newEpisodes[0].imageUrl)
-} catch(Exception e) {}
-
-if (newEpisodes.size() == 1) {
-  def e = newEpisodes[0]
-  title = "${e.title} is out!"
-} else {
-  // shell work function to make the Android notification test bigger
-  setNotificationBigText(true)
-  title = "Many episodes are out!"
-  message = "- " + newEpisodes*.title.join("\n- ")
-}
-
-// shell work functions to set the notification that will be displayed at the end
-// of this shell work
-setFinalTitle title
-setFinalMessage message
-setIcon icon
-
-// save new last episodes in tracks
-flushNewEpisodes newEpisodes
-
-// optionally return a result for the work
-return newEpisodes.size() + " new episodes"
-```
+You can learn more about it [here](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)

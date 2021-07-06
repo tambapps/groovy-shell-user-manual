@@ -4,7 +4,6 @@
 - Pro version became free! access features like [shell works](https://tambapps.github.io/groovy-shell-user-manual/environments/), [environments](https://tambapps.github.io/groovy-shell-user-manual/shell-works/), [auto-completion](https://tambapps.github.io/groovy-shell-user-manual/auto-completion/)
 - Added possibility to configure remote Maven repositories
 - Upgraded hyperpoet to 1.0.0
-- 
 
 ## 3.1.1
 - Adapted to [Android 11 new restrictions](https://developer.android.com/about/versions/11/privacy/storage#:~:text=Android%2011%20expands%20upon%20this,its%20data%20directory%20world%2Dreadable.)

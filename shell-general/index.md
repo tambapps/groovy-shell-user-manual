@@ -62,7 +62,7 @@ Furthermore, you can import many packages (and enums) with [import aliases](http
 
 ### Ask permission
 
-## Pre Android 11
+#### Pre Android 11
 Android restricts the app access to files. To grant it, you'll need to ask permission like in the following
 example.
 ```groovy  
@@ -82,7 +82,7 @@ Here is the list of permissions you can ask
 
 You can also see granted permissions in the preferences screen.
 
-## Post Android 11
+#### Post Android 11
 Since [Android 11 new restrictions](https://developer.android.com/about/versions/11/privacy/storage#:~:text=Android%2011%20expands%20upon%20this,its%20data%20directory%20world%2Dreadable.), a the READ/WRITE_EXTERNAL_STORAGE 
 permissions became useless, they have been replaced by the MANAGE_EXTERNAL_STORAGE, allowing to read AND write to external storage. You
 can request this permission with the following function:
@@ -110,7 +110,7 @@ class A {
 Getting instances
 ```groovy
 a = new A()
-a2 = A(b: 1)
+a2 = new A(b: 1)
 a3 = CLASSES.A.newInstance()
 a4 = CLASSES.A.newInstance(b: 1)
 ```
