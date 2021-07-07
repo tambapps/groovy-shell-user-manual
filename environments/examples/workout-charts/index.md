@@ -2,7 +2,7 @@
 
 This environment allows you to track your progress for workout exercises.
 
-You can find the environment script [here]().
+You can find the environment script [here](https://raw.githubusercontent.com/tambapps/groovy-shell-user-manual/main/environments/examples/workout-charts/Workout.groovy).
 Simply copy the text into a file, and create an environment (from the Groovy Shell) using this file
 
 ## Data structures
@@ -120,6 +120,6 @@ It is saved automatically when calling `saveAll()`
 
 ## Chart output example
 
-Here is an example of chart of the `chest` muscle
+Here is an example of chart of the `leg` muscle
 
 ![Charts screenshot](https://tambapps.github.io/groovy-shell-user-manual/images/chart_scrrenshot1.jpg "Charts screenshot")
