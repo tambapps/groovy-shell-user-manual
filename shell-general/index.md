@@ -1,7 +1,6 @@
 # Shell (general)
 This section talks about some Groovy features handled by this shell and how to use them.
 
-## Features
 This shell can use most of Groovy SDK. It is based on Groovy 2.4.XX. The version used will be
 displayed when you'll start the shell.
 
@@ -14,7 +13,7 @@ syntax. Use closure instead (e.g `{ Object o -> println(o) }`).
 Groovy meta-programming also works. You can define, override method of classes/objects at runtime.
 To perform that, check the [Groovy documentation](https://groovy-lang.org/documentation.html)
 
-### Variable declarations
+## Variable declarations
 Be careful with variable declaration. If you put the type (or `def`) before the variable, you submit the code (a prompt) and then try to access the same variable, it won't exist anymore.
 If you want to keep the variable after you submitted your code you'll have to omit the type/`def`.
 
@@ -37,7 +36,7 @@ Here is the proper way to declare variables if you want to keep them in your nex
 a = 2
 variable = "some value"
 ```
-### Imports
+## Imports
 Here is an example of import
 Example:
 ````groovy
@@ -60,9 +59,9 @@ java.util.concurrent.atomic.*
 
 Furthermore, you can import many packages (and enums) with [import aliases](https://tambapps.github.io/groovy-shell-user-manual/import-aliases/)
 
-### Ask permission
+## Ask permission
 
-#### Pre Android 11
+### Pre Android 11
 Android restricts the app access to files. To grant it, you'll need to ask permission like in the following
 example.
 ```groovy  
@@ -82,7 +81,7 @@ Here is the list of permissions you can ask
 
 You can also see granted permissions in the preferences screen.
 
-#### Post Android 11
+### Post Android 11
 Since [Android 11 new restrictions](https://developer.android.com/about/versions/11/privacy/storage#:~:text=Android%2011%20expands%20upon%20this,its%20data%20directory%20world%2Dreadable.), a the READ/WRITE_EXTERNAL_STORAGE 
 permissions became useless, they have been replaced by the MANAGE_EXTERNAL_STORAGE, allowing to read AND write to external storage. You
 can request this permission with the following function:
@@ -90,7 +89,7 @@ can request this permission with the following function:
 requestManageFilesPermission()
 ```
 
-### Class definition
+## Class definition
 You can define classes. When you do so, by default, you can't put any other instructions after in the same prompt, they won't be processed (yeah, this is weird but this is how it works).
 You CAN put other instructions only if between the class definition and the rest, you put special the comment`/*PROMPT*/`.
 To get instances from the defined class, you'll need to use java.reflect methods. You can construct instances with
@@ -115,7 +114,7 @@ a3 = CLASSES.A.newInstance()
 a4 = CLASSES.A.newInstance(b: 1)
 ```
 
-### Special comment `/*PROMPT*/`
+## Special comment `/*PROMPT*/`
 This comment allows you to define classes in a script/shell works, or even defining multiple
 classes.
 
@@ -139,7 +138,7 @@ b = new B()
 doSomething(a, b)
 ```
 
-### Standard Input (STDIN)
+## Standard Input (STDIN)
 You can also write programs using the standard input with the help of the `System.console()` (or variable `console`)
 
 ```groovy
