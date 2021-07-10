@@ -61,8 +61,12 @@ Furthermore, you can import many packages (and enums) with [import aliases](http
 
 ## Ask permission
 
+In order for the app to perform I/O operations, you'll need to grant some permissions.
+The available permissions depend on the version of your Android device (which is displayed everytime
+you start a new shell).
+
 ### Pre Android 11
-Android restricts the app access to files. To grant it, you'll need to ask permission like in the following
+Android restricts the app access to files. To grant this permission, you'll need to ask permission like in the following
 example.
 ```groovy  
 permission = Permissions.WRITE_EXTERNAL_STORAGE
