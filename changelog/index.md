@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.2.1
+- Permission bug fix (couldn't save script even when had permission)
+
 ## 3.2.0
 - Pro version became free! access features like [shell works](https://tambapps.github.io/groovy-shell-user-manual/environments/), [environments](https://tambapps.github.io/groovy-shell-user-manual/shell-works/), [auto-completion](https://tambapps.github.io/groovy-shell-user-manual/auto-completion/)
 - Added possibility to configure remote Maven repositories
