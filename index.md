@@ -16,11 +16,10 @@ I strongly recommend using this app with a keyboard adapted for coding such as [
   * [Shell (managing files)](https://tambapps.github.io/groovy-shell-user-manual/managing-files/)
   * [Import Aliases](https://tambapps.github.io/groovy-shell-user-manual/import-aliases/)
   * [Dependency Management](https://tambapps.github.io/groovy-shell-user-manual/dependency-management/)
-  * [Environments (pro feature)](https://tambapps.github.io/groovy-shell-user-manual/environments/)
-  * [Shell Works (pro feature)](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)
-  * [Auto Completion (pro feature)](https://tambapps.github.io/groovy-shell-user-manual/auto-completion/)
+  * [Environments](https://tambapps.github.io/groovy-shell-user-manual/environments/)
+  * [Shell Works](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)
+  * [Auto Completion](https://tambapps.github.io/groovy-shell-user-manual/auto-completion/)
 * Libraries
-  * [bitmap](https://tambapps.github.io/groovy-shell-user-manual/libraries/bitmap/)
   * [charts](https://tambapps.github.io/groovy-shell-user-manual/libraries/charts/)
   * [gmage](https://tambapps.github.io/groovy-shell-user-manual/libraries/gmage/)
   * [hyperpoet](https://github.com/tambapps/hyperpoet/)
@@ -161,8 +160,8 @@ println list.technology.name.text() == 'Groovy'
 ```
 
 ### Schedule a script to run
-I introduced the notion of Shell Works, a script that runs on the background. You can also
-schedule it to run later, and/or make it periodic. For example, you can write a script to check if
+I introduced the notion of Shell Works, a script that runs in the background. You can also
+schedule it to run later, and/or make it periodic. For example, you can write a script to check every day if
 there are some new articles on your favorite website and notify you about!
 
 You can learn more about it [here](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)

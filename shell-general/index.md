@@ -87,10 +87,14 @@ You can also see granted permissions in the preferences screen.
 
 ### Post Android 11
 Since [Android 11 new restrictions](https://developer.android.com/about/versions/11/privacy/storage#:~:text=Android%2011%20expands%20upon%20this,its%20data%20directory%20world%2Dreadable.), a the READ/WRITE_EXTERNAL_STORAGE 
-permissions became useless, they have been replaced by the MANAGE_EXTERNAL_STORAGE, allowing to read AND write to external storage. You
-can request this permission with the following function:
-```groovy
-requestManageFilesPermission()
+permissions became useless, they have been replaced by the MANAGE_EXTERNAL_STORAGE, allowing to read AND write to external storage. To request this permission, you'll need to request READ_EXTERNAL_STORAGE and/or WRITE_EXTERNAL_STORAGE (they are treated as same permissions, post Android 11), but note that you'll need to request these file permissions separatly from others
+
+```groovy  
+// requesting file permissions
+requestPermission(Permissions.WRITE_EXTERNAL_STORAGE)
+// *prompt*
+// then requesting other permission
+requestPermission(Permissions.ACCESS_NETWORK_STATE)
 ```
 
 ## Class definition

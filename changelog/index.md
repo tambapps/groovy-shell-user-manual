@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.3.0
+- Bumped Groovy version to 3.0.9
+- implemented environment cache so that loading them becomes fast
+- [Environments] imports aliases and grabbed dependencies now have to be specified outside the environment script (there's buttons for that when modifying an environment)
+- targeted Android 12
+- bumped dependencies version
+
 ## 3.2.1
 - Permission bug fix (couldn't save script even when had permission)
 

@@ -1,5 +1,5 @@
-import chart
-import json
+// using import aliases chart and json
+// specify them when creating/modifying your environment
 
 import java.text.SimpleDateFormat
 
