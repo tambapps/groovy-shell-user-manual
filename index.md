@@ -20,10 +20,11 @@ I strongly recommend using this app with a keyboard adapted for coding such as [
   * [Shell Works](https://tambapps.github.io/groovy-shell-user-manual/shell-works/)
   * [Auto Completion](https://tambapps.github.io/groovy-shell-user-manual/auto-completion/)
 * Libraries
+  * [hyperpoet](https://github.com/tambapps/hyperpoet/wiki)
+  * [grooview](https://github.com/tambapps/grooview)
   * [charts](https://tambapps.github.io/groovy-shell-user-manual/libraries/charts/)
   * [gmage](https://tambapps.github.io/groovy-shell-user-manual/libraries/gmage/)
-  * [hyperpoet](https://github.com/tambapps/hyperpoet/)
-  * [jsoup](https://tambapps.github.io/groovy-shell-user-manual/libraries/jsoup/)
+  * [jsoup (not from me)](https://tambapps.github.io/groovy-shell-user-manual/libraries/jsoup/)
 * [Changelog](https://tambapps.github.io/groovy-shell-user-manual/changelog/)
 
 ## Use cases
